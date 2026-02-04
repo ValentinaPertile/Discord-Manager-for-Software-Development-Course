@@ -1,0 +1,185 @@
+.server-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.server-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4eb3b3, transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.server-card:hover::before {
+  transform: translateX(100%);
+}
+
+.server-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(78, 179, 179, 0.3);
+  box-shadow: 0 10px 30px rgba(78, 179, 179, 0.2);
+}
+
+.server-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.server-icon img,
+.default-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #4eb3b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.server-info {
+  flex: 1;
+  color: #fff;
+}
+
+.server-name {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.server-id {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #b0b0b0;
+  font-family: monospace;
+}
+
+.server-status {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.status-checking {
+  color: #ffc107;
+}
+
+.status-error {
+  color: #e74c3c;
+}
+
+.status-connected {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4eb3b3;
+  font-weight: 500;
+}
+
+.status-indicator.connected {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #4eb3b3;
+}
+
+.permission-warning {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: #ffc107;
+}
+
+.status-disconnected {
+  color: #ff9800;
+}
+
+/* Botones */
+.server-actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-checking {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+  cursor: default;
+}
+
+.btn-retry {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+}
+
+.btn-dashboard {
+  background: linear-gradient(135deg, #4eb3b3, #3a8f8f);
+  color: #1a1a1a;
+}
+
+.btn-invite {
+  background: rgba(78, 179, 179, 0.1);
+  border: 1px solid rgba(78, 179, 179, 0.3);
+  color: #4eb3b3;
+}
+
+.btn-retry:hover,
+.btn-dashboard:hover,
+.btn-invite:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+.server-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column; /* columna en vez de fila */
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 180px; /* asegura altura consistente */
+  transition: all 0.3s;
+}
+
+.server-info {
+  flex: 1;
+}
+
+.server-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.server-actions button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}

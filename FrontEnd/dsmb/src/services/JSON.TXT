@@ -1,0 +1,12 @@
+[
+  {
+    "id": "123456789",
+    "name": "Mi Servidor",
+    "icon": "a1b2c3d4...",
+    "owner": false,
+    "permissions": "2147483647",
+    "features": ["COMMUNITY"],
+    "approximate_member_count": 150
+  },
+  ...
+]

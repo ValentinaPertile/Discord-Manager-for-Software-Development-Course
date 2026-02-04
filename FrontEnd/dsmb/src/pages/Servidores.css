@@ -1,0 +1,136 @@
+.servidores-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 2rem 2rem 2rem; /* Aumentado padding-top de 2rem a 80px */
+  min-height: 100vh;
+  background: #1a1a1a;
+}
+
+.servidores-page h1 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 300;
+  background: linear-gradient(135deg, #ffffff, #4eb3b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.servidores-page > p {
+  margin-bottom: 2rem;
+  color: #b0b0b0;
+  font-size: 1rem;
+}
+
+/* Estado de WebSocket */
+.ws-status {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.ws-status.connecting {
+  background: rgba(255, 193, 7, 0.1);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  color: #ffc107;
+}
+
+.ws-status.connected {
+  background: rgba(78, 179, 179, 0.1);
+  border: 1px solid rgba(78, 179, 179, 0.3);
+  color: #4eb3b3;
+}
+
+.ws-status.disconnected {
+  background: rgba(255, 152, 0, 0.1);
+  border: 1px solid rgba(255, 152, 0, 0.3);
+  color: #ff9800;
+}
+
+.ws-status.error {
+  background: rgba(231, 76, 60, 0.1);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  color: #e74c3c;
+}
+
+/* Grid de servidores */
+.servers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estados de carga y error */
+.loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  padding-top: calc(80px + 4rem); /* Ajustado para el navbar */
+  color: #4eb3b3;
+  font-size: 1.2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a1a;
+}
+
+.error {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(231, 76, 60, 0.1);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  border-radius: 0.5rem;
+  color: #e74c3c;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.no-servers {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.no-servers p {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .servidores-page {
+    padding: 70px 1rem 1rem 1rem; /* Ajustado para móviles */
+  }
+  
+  .servidores-page h1 {
+    font-size: 2rem;
+  }
+  
+  .servers-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
