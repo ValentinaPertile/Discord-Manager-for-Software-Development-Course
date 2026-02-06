@@ -1,4 +1,4 @@
-# Discord Dashboard Manager (DiscordPAGE) 🤖
+# Discord Dashboard Manager (DiscordPAGE) 
 
 A professional, scalable, and responsive web interface designed to serve as a centralized management dashboard for a custom Discord Bot. This platform bridges the gap between server administrators and bot configuration through a seamless web experience.
 
